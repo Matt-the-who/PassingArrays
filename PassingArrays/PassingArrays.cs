@@ -24,19 +24,19 @@ namespace PassingArrays
 
         public int ArrayCheck(int [] theArray)
         {//Finds the largest # in array
-            int largestNumber = 0;
+            int smallestNumber = 10;
 
             foreach (int aSingleInteger in theArray)
             {
-                if (aSingleInteger > largestNumber)
+                if (smallestNumber > aSingleInteger)
                 {
-                    largestNumber = aSingleInteger;
+                    smallestNumber = aSingleInteger;
                 }
 
             } 
 
 
-            return largestNumber;
+            return smallestNumber;
         }
 
         public frmPassingArrays()
@@ -63,7 +63,7 @@ namespace PassingArrays
             }
 
             //Output
-            this.lblAnswer.Text = "The largest number is " + ArrayCheck(arrayOfNumbers);
+            this.lblAnswer.Text = "The smallest number is " + ArrayCheck(arrayOfNumbers);
         }
     }
 }
